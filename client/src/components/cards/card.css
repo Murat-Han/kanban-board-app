@@ -1,0 +1,56 @@
+.card {
+  margin: 10px 0;
+  padding: 0 10px;
+  height: auto;
+  width: 100%;
+  min-width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 5px;
+}
+.card-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+}
+
+.task-title {
+  color: white;
+  font-weight: bold;
+}
+
+.task-text {
+  color: white;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.btn-edit,
+.btn-delete {
+  margin: 0 5px;
+  background-color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 50px;
+  padding: 5px;
+  opacity: 0.8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+  opacity: 1;
+}
