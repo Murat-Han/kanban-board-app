@@ -2,7 +2,7 @@
   "name": "kanban-board-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/api",
+  "proxy": "https://kanban-board-app.murat-han.repl.co/api",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.16.1",
