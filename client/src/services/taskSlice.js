@@ -8,7 +8,7 @@ const initialState = {
 
 // CREATE TASK TO DATABASE OVER REST API
 export const createTask = createAsyncThunk("createTask", async (newTask) => {
-  const response = await axios.post("https://kanban-board-app.murat-han.repl.co/", {
+  const response = await axios.post("/", {
     id: newTask.taskId,
     columnId: newTask.columnId,
     title: newTask.title,
@@ -24,7 +24,7 @@ export const createTask = createAsyncThunk("createTask", async (newTask) => {
 
 // GET TASKS FROM DATABASE OVER REST API
 export const getTasks = createAsyncThunk("getTasks", async () => {
-  const response = await axios.get("https://kanban-board-app.murat-han.repl.co/kanbanpublic");
+  const response = await axios.get("/kanbanpublic");
   console.log(response.data);
   return response.data;
 });
@@ -33,7 +33,7 @@ export const getTasks = createAsyncThunk("getTasks", async () => {
 export const updateTask = createAsyncThunk(
   "updateTask",
   async (task_Id, columnId, title, text) => {
-    const response = await axios.put("https://kanban-board-app.murat-han.repl.co/", {
+    const response = await axios.put("/", {
       id: task_Id,
       columnId: columnId,
       title: title,
@@ -52,7 +52,7 @@ export const updateTask = createAsyncThunk(
 //DELETE TASK FROM DATABASE OVER REST API
 export const deleteTask = createAsyncThunk("deleteTask", async (_id) => {
   try {
-    const response = await axios.delete("https://kanban-board-app.murat-han.repl.co/", {
+    const response = await axios.delete("/", {
       id: _id,
     });
     if (!response.ok) {
